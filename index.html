@@ -459,16 +459,6 @@ class App extends React.Component {
     console.log(JSON.stringify(this.auth));
   }
 
-//   class App extends React {
-//   constructor(prop) {
-//     super(prop);
-//     this.ws = prop.ws;
-//     this.auth = new AuthInfo();
-//     this.state = {
-//       active: form/>
-//     };
-//     console.log(JSON.stringify(this.auth));
-//   }
 
   componentDidMount() {
     const self = this;
@@ -501,12 +491,6 @@ class App extends React.Component {
   }
 } 
 
-
-// const ws = new AuthService();
-// ReactDOM.fileRender(
-//   <App ws={ws}/>,
-//   document.getElementById('root') //getting root
-// );
 
 const ws = new AuthService();
 ReactDOM.render(
