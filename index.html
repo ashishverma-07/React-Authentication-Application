@@ -306,10 +306,6 @@ class Form extends React.Component {
     event.preventDefault();
     this.props.app.setActive(this.form.linkAction);
   }
-//   onClickHandler(click) {
-//    click.preventDefault();
-//     this.props.setActive(this.linkAction);
-//   }
 
   onChangeHandler(event) {
     const name = event.target.name;
@@ -388,9 +384,6 @@ class Form extends React.Component {
 
   render() {
 
-    // const { title, action, linkAction, infos } = this.form;
-    // const names = this.state.values;
-    // const err = this.state.errors;
 
     const { title, action, linkAction, infos } = this.form;
     const values = this.state.values;
