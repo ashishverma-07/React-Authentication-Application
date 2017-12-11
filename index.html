@@ -86,34 +86,6 @@ function AuthService() {
       });
   }
 
-//   function AuthService() {
-//   const WS_URL = localhost;
-
-//   function getWsUrl() {
-//     const p = (new URL(document.location)).searchParams;
-//     return p.get('ws-url') || WS_URL;
-//   }
-
-//   this.register = function(id, pw, info) {
-//     return axios.put(`${this.baseUrl}/users/${id}?pw=${pw}`, //axios usage
-//                      info, { maxRedirects: 0 })
-//       .then((response) => response.data)
-//       .catch(function(err) {
-//         const status = err.response.status;
-//         if (status === 303) {
-//           return err.response.data;
-//         }
-//         else if (status === 401) { 
-//           return {
-//             status: "EXISTS",
-//             
-//           };
-//         }
-//         else error
-//       });
-//   }
-
-
   this.login = function(id, pw) {
     return axios.put(`${this.baseUrl}/users/${id}/auth`,
                      { pw: pw }, { maxRedirects: 0 })
@@ -209,14 +181,6 @@ function loginRegister(app, id, promise) {
         };
     });
 }
-
-
-// function register(app, values) {
-//   const id = values.email;
-//   const info = {
-//     firstName: firstN,
-//     lastName: lastN
-//   };
 
 function register(app, values) {
   const id = values.email;
